@@ -11,11 +11,12 @@ div.container {
     max-width: 1140px;
     padding-right: 15px;
     padding-left: 15px;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
 }
 
-                                            /* Header */
+                                                /* Header - 1 */
 
 div.header-1 {
     background-color: #f4f4f4;
@@ -66,7 +67,83 @@ div.prt-right div a {
 div.prt-right div a:hover {
     color: #00aeef;
 }
-                                            /* Media's */
+
+                                                /* Header - 2 */
+
+nav.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    height: 90px;
+    line-height: 21px;
+}
+
+nav.nav a.logo-img {
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 39px;
+    margin-right: 30px;
+    transition: .5s all;
+}
+
+nav.nav a.logo-img img {
+    vertical-align: middle;
+    height: 40px;
+}
+
+li.has-down {
+    position: relative;
+}
+
+ul.header-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul.dropdown {
+    background-color: #fff;
+    box-shadow: 0 1px 5px rgb(0 0 0 / 10%);
+    width: 180px;
+    top: 120%;
+    position: absolute;
+    z-index: 10;
+    padding: 10px 0px;
+    visibility: hidden;
+    opacity: 0;
+    transition-duration: 300ms;
+    text-align: start;
+    
+}
+
+ul.dropdown li a.submenu {
+    font-size: 12px;
+    text-transform: capitalize;
+    height: 35px;
+    padding: 0 15px;
+    transition: .5s all;
+    border-bottom: 1px solid rgba(242, 244, 248, 0.7);
+    display: block;
+}
+
+ul.header-nav li a {
+    font-family: 'Montserrat', sans-serif;
+    padding: 0 15px;
+    font-weight: 600;
+    font-size: 14px;
+    color: rgb(35, 35, 35)
+}
+
+li.has-down:hover ul.dropdown {
+    opacity: 1;
+    visibility: visible;
+    top: 100%;
+}
+
+                                                /* Media's */
 
 @media screen and ( max-width: 992px) {
     div.container {
@@ -90,10 +167,39 @@ div.prt-right div a:hover {
     div.prt-right {
         width: 100%;
     }
+    
+    div.prt-left {
+        display: flex;
+    }
 }
 
 @media screen and ( max-width: 576px) {
     div.container {
         max-width: 540px;
     }
+    
+    div.prt-left {
+        padding: 0px;
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
