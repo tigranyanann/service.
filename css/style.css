@@ -4,6 +4,7 @@
     list-style: none;
     box-sizing: border-box;
     text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
 }
 
 div.container {
@@ -70,84 +71,247 @@ div.prt-right div a:hover {
 
                                                 /* Header - 2 */
 
-nav.nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 14px;
-    font-weight: 400;
+nav {
     height: 90px;
-    line-height: 21px;
-}
-
-nav.nav a.logo-img {
-    font-weight: 500;
-    font-size: 26px;
-    line-height: 39px;
-    margin-right: 30px;
-    transition: .5s all;
-}
-
-nav.nav a.logo-img img {
-    vertical-align: middle;
-    height: 40px;
-}
-
-li.has-down {
-    position: relative;
-}
-
-ul.header-nav {
+    padding: 0px;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav a.header-logo {
+    font-size: 26px;
+    font-weight: 500;
+    color: #565656;
+    display: inline-block;
+    margin-right: 30px;
+    font-family: 'Montserrat', sans-serif;
+} 
+
+div.classy-nav {
+    display: flex;
     align-items: center;
 }
 
-ul.dropdown {
-    background-color: #fff;
-    box-shadow: 0 1px 5px rgb(0 0 0 / 10%);
-    width: 180px;
-    top: 120%;
-    position: absolute;
+ul.nav li {
+    display: inline-block;
     z-index: 10;
-    padding: 10px 0px;
-    visibility: hidden;
-    opacity: 0;
-    transition-duration: 300ms;
-    text-align: start;
-    
 }
 
-ul.dropdown li a.submenu {
-    font-size: 12px;
-    text-transform: capitalize;
-    height: 35px;
-    padding: 0 15px;
-    transition: .5s all;
-    border-bottom: 1px solid rgba(242, 244, 248, 0.7);
-    display: block;
-}
-
-ul.header-nav li a {
-    font-family: 'Montserrat', sans-serif;
+ul.nav li a {
     padding: 0 15px;
     font-weight: 600;
     font-size: 14px;
-    color: rgb(35, 35, 35)
+    display: block;
+    height: 35px;
+    line-height: 34px;
+    text-align: start;
 }
 
-li.has-down:hover ul.dropdown {
+ul.nav li.dropdown-item {
+    position: relative;
+    z-index: 10;
+}
+
+ul.dropdown {
+    width: 180px;
+    position: absolute;
+    background-color: #ffffff;
+    top: 120%;
+    left: 0;
+    z-index: 100;
+    height: auto;
+    box-shadow: 0 1px 5px rgb(0 0 0 / 10%);
+    transition-duration: 300ms;
+    opacity: 0;
+    visibility: hidden;
+    padding: 10px 0;
+    display: none;
+}
+
+ul.dropdown li{
+    display: block;
+    position: static;
+}
+
+li.has a {
+    font-size: 12px;
+    text-transform: capitalize;
+}
+
+li.has ul.down {
+    top: 10px;
+    left: 180px;
+    z-index: 200;
+    opacity: 0;
+    visibility: hidden;
+}
+
+ul.nav li.has-down:hover ul.dropdown {
     opacity: 1;
     visibility: visible;
     top: 100%;
 }
 
+li.has a {
+    font-size: 12px;
+    text-transform: capitalize;
+}
+
+li.has ul.down {
+    top: 10px;
+    left: 180px;
+    z-index: 200;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s all;
+}
+
+ul.dropdown li {
+    border-bottom: 1px solid rgba(242, 244, 248, 0.7);
+}
+
+li.has:hover ul.down {
+    opacity: 1;
+    visibility: visible;
+    position: absolute;
+    height: 160px;
+    width: 100%;
+    left: 180px;
+    padding: 10px 0px;
+}
+
+li.has1 ul {
+    opacity: 0;
+    visibility: hidden;
+}
+
+li.has {
+    position: relative;
+}
+
+li a.general {
+    color: #333;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    height: 35px;
+    line-height: 34px;
+    font-weight: 600;
+    padding: 0 15px;
+    transition: .5s all;
+}
+
+div.classy-nav ul li a:hover {
+    color: #00aeef;
+}
+
+div.classy-nav ul li a:hover i {
+    color: #333;
+}
+
+nav a.booking-now {
+    border: 2px solid #00aeef;
+    background-color: #00aeef;
+    border-radius: 2px;
+    color: #fff;
+    font-weight: 600;
+    min-width: 140px;
+    height: 40px;
+    line-height: 36px;
+    font-size: 12px;
+    transition-duration: 500ms;
+}
+
+nav a.booking-now:hover {
+    font-size: 12px;
+    font-weight: 600;
+    background-color: #fff;
+    color: #00aeef;
+}
+
+                                                /* SECTION - 1 */
+
+section.first{
+    background-image: url(../img/x12.jpg.pagespeed.ic.xxtlPIASfi.webp);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
+    height: 200px;
+} 
+
+section.first::after {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: #2c455d;
+    background: linear-gradient(to right,#2c455d,#00012c);
+    opacity: .85;
+}
+
+div.service-text {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    min-height: 200px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.service-text h2 {
+    font-size: 40px;
+    margin-bottom: 0;
+    color: #fff;
+    text-align: center;
+}
+
+                                                /* SECTION - 1 */
+
+div.all-second {
+    padding: 0 15px;
+    position: relative;
+}
+
+div.all-second div {
+    padding: 30px 0px;
+}
+
+div.all-second div ul {
+    display: flex;
+}
+
+div.all-second div ul li {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333333;
+}
+
+div.all-second div ul li:last-child {
+    padding-left: 8px;
+}
+
+div.all-second div ul li:last-child i {
+    padding-right: 8px;
+}
                                                 /* Media's */
 
 @media screen and ( max-width: 992px) {
     div.container {
         max-width: 960px;
+    }
+    
+    div.classy-menu {
+        display: none;
     }
 }
 
@@ -171,6 +335,10 @@ li.has-down:hover ul.dropdown {
     div.prt-left {
         display: flex;
     }
+    
+    a.header-logo img {
+        width: 90px;
+    }
 }
 
 @media screen and ( max-width: 576px) {
@@ -182,6 +350,26 @@ li.has-down:hover ul.dropdown {
         padding: 0px;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
