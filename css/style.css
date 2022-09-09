@@ -274,7 +274,7 @@ div.service-text h2 {
     text-align: center;
 }
 
-                                                /* SECTION - 1 */
+                                                /* SECTION - 2 */
 
 div.all-second {
     padding: 0 15px;
@@ -303,6 +303,92 @@ div.all-second div ul li:last-child {
 div.all-second div ul li:last-child i {
     padding-right: 8px;
 }
+
+div.all-second div ul li a {
+    font-size: 14px;
+    text-transform: capitalize;
+    color: #333333;
+    font-weight: 500;
+    transition-duration: 500ms;
+}
+
+div.all-second div ul li a:hover {
+    color: #00aeef;
+}
+
+div.all-second div ul li i {
+    font-size: 11px;
+}
+
+div.all-second div ul li:last-child {
+    color: #707070; 
+}
+
+                                                /* SECTION - 3 */
+
+section.tird {
+    margin: 50px 0px;
+}
+
+div.all-stt-boxs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+div.all-stt-boxs div {
+    width: calc(33%);
+    max-width: 370px;
+    padding: 0 15px;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+div.all-stt-boxs div div {
+    position: relative;
+    z-index: 1;
+    transition-duration: 500ms;
+    width: 76px;
+    height: 76px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+div.all-stt-boxs div div img {
+    position: absolute;
+    max-height: 35px;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+div.all-stt-boxs div:hover div.i-img {
+    box-shadow: 0 2px 50px 0 rgb(0 0 0 / 15%);
+}
+
+div.all-stt-boxs div h5 {
+    margin-bottom: 15px;
+    color: #333;
+    line-height: 1.4;
+    font-weight: 600;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+div.all-stt-boxs div p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 26.6px;
+    margin-bottom: 16px;
+    text-align: center;
+    color: #707070;
+}
+
+
                                                 /* Media's */
 
 @media screen and ( max-width: 992px) {
@@ -312,6 +398,12 @@ div.all-second div ul li:last-child i {
     
     div.classy-menu {
         display: none;
+    }
+    
+    div.all-stt-boxs div {
+        width: calc(50%);
+        max-width: 360px;
+        margin-bottom: 0px;
     }
 }
 
@@ -339,6 +431,10 @@ div.all-second div ul li:last-child i {
     a.header-logo img {
         width: 90px;
     }
+    
+    div.all-stt-boxs div {
+        max-width: 240px;
+    }
 }
 
 @media screen and ( max-width: 576px) {
@@ -347,6 +443,13 @@ div.all-second div ul li:last-child i {
     }
     
     div.prt-left {
+        padding: 0px;
+    }
+    
+    div.all-stt-boxs div {
+        width: calc(100%);
+        width: 100%;
+        max-width: none;
         padding: 0px;
     }
 }
