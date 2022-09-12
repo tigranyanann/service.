@@ -7,8 +7,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/e260159a62.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
 </head>
 <body>
    <header class="header">
@@ -203,6 +207,59 @@
                </div>
            </div>
        </secton>
+       <section class="for">
+           <div class="container">
+               <div class="for-all">
+                   <div class="dentist">
+                       <div>
+                           <div class="swiper mySwiper">
+                               <div class="swiper-wrapper">
+                                   <div class="swiper-slide">
+                                       <div>
+                                           <div class="dentist-img">
+                                               <img src="./img/x8.jpg.pagespeed.ic.gI4xoMcOub.webp" alt="#">
+                                           </div>
+                                           <div class="about-dentist">
+                                               <h5>“I'd been avoiding the dentist for years due to bad experiences. A reminder SMS is sent the working day beforehand. I also had a call confirming appointment. I have been a patient ever since. My dentist is very reassuring and
+                                               very helpful. Excellent treatment and advice.”</h5>
+                                               <h6>Arron Ramsey</h6>
+                                               <p>Dental Patient</p>
+                                           </div>
+                                       </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="dentist-img">
+                                            <img src="./img/x8.jpg.pagespeed.ic.gI4xoMcOub.webp" alt="#">
+                                        </div>
+                                        <div class="about-dentist">
+                                            <h5>“I'd been avoiding the dentist for years due to bad experiences. A reminder SMS is sent the working day beforehand. I also had a call confirming appointment. I have been a patient ever since. My dentist is very reassuring and
+                                            very helpful. Excellent treatment and advice.”</h5>
+                                            <h6>Arron Ramsey</h6>
+                                            <p>Dental Patient</p>
+                                        </div>
+                                    </div>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+           <div class="for-bgimg">
+               <div></div>
+           </div>
+       </section>
    </main>
+   
+   <!-- Swiper JS -->
+   <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    
+    <!-- Initialize Swiper -->
+    <script>
+            var swiper = new Swiper(".mySwiper", {
+                slidesPerView: 1,
+                spaceBetween: 30,
+                loop: true,
+            });
+    </script>
 </body>
 </html>
