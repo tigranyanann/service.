@@ -412,8 +412,12 @@ div.dentist {
 
 div.swiper-slide div {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: start;
+    align-items: start;
+}
+
+div.swiper-slide div h5 {
+    text-align: start;
 }
 
 div.swiper-slide div div.dentist-img {
@@ -432,14 +436,56 @@ div.swiper-slide div div.about-dentist {
     z-index: 1;
 }
 
-div.swiper-slide div div.about-dentist  {
+div.about-dentist  {
     font-family: 'Montserrat', sans-serif;
     font-size: 18px;
     font-weight: 400;
     line-height: 1.8;
     font-style: italic;
     margin-bottom: 15px;
-    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    color: #fff;
+}
+
+div.swiper{
+    position: relative;
+    overflow: hidden;
+    transform: translate3d(0,0,0);
+}
+
+div.swiper-wrapper {
+    transform: translate3d(-2220px, 0px, 0px);
+    transition: all 0s ease 0s;
+    width: 7770px;
+}
+
+div.about-dentist h5 {
+    font-size: 17.5px;
+    font-weight: 400;
+    line-height: 1.8;
+    font-style: italic;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+div.about-dentist h6 {
+    font-weight: 500;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.4;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+div.about-dentist p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.9;
+    margin-bottom: 0;
+    color: #fff;
 }
 
 div.for-bgimg {
@@ -451,23 +497,30 @@ div.for-bgimg {
     overflow: hidden;
     pointer-events: none;
     z-index: -100;
+    max-height: 380px;
 }
 
-div.for-bgimg div {
+section.for {
     background-position: 50% 50%;
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url(../img/x7.jpg.pagespeed.ic.WWYqzyT8wB.webp);
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    width: 1349px;
-    height: 377.6px;
-    overflow: hidden;
-    pointer-events: none;
-    margin-top: -0.3px;
-    transform: translate3d(0px, 8.0125px, 0px);
+    background-image: url(https://preview.colorlib.com/theme/dento/img/bg-img/x7.jpg.pagespeed.ic.WWYqzyT8wB.webp);
+    position: relative;
 }
+
+
+section.for::after {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to right, #2c455d, #00012c);
+    opacity: 0.85;
+}
+
+
                                                 /* Media's */
 
 @media screen and ( max-width: 992px) {
@@ -513,6 +566,18 @@ div.for-bgimg div {
     
     div.all-stt-boxs div {
         max-width: 240px;
+    }
+    
+    div.swiper-slide div {
+        flex-direction: column;
+    }
+    
+    div.dentist-img {
+        margin-bottom: 50px;
+    }
+    
+    div.dentist {
+        padding: 0px;
     }
 }
 
